@@ -5,7 +5,7 @@ This repository contains the codes and data of our paper: Semantic Frame Aggrega
 Processed Dataset can be downloaded from the [Google-Drive](https://drive.google.com/drive/folders/1CJHMAt-_uSTOydhYLrH-I0NuaW0vf2KV?usp=sharing) and placed in ../dataset folder.
 
 ## SFAT Model
-SFAT model checkpoints can be downloaded from the [Google-Drive](https://drive.google.com/drive/folders/1v3GpjvqF6t5vOEOdcTWLKVNlQ_D-1tNu?usp=sharing) and placed in ../model_saves/avc_transformer folder.
+SFAT model checkpoints can be downloaded from the [Google-Drive](https://drive.google.com/drive/folders/1MSe3_0LYnE_-XVBmke87uiQVhEtJvx_J?usp=sharing) and placed in ../model_saves/avc_transformer folder.
 
 - Pretraining: In the first stage, the text encoder for context comments is pre-trained using a masked language modeling (MLM) task. Pretraining script:
   ```python
