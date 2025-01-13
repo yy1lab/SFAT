@@ -1,5 +1,5 @@
 # SFAT
-This repository contains the codes and data of our paper: Semantic Frame Aggregation-based Transformer for Live Video Comment Generation
+This repository contains the codes and data of our paper: **Semantic Frame Aggregation-based Transformer for Live Video Comment Generation**.
 
 ## VideoChat Dataset
 Processed Dataset can be downloaded from the [Google-Drive](https://drive.google.com/drive/folders/1CJHMAt-_uSTOydhYLrH-I0NuaW0vf2KV?usp=sharing) and placed in `../dataset` folder.
