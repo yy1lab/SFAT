@@ -27,8 +27,6 @@ if __name__=="__main__":
     # Setting up hyperparameters
     logging.set_verbosity_error()
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
-
-    breakpoint();
     
     num_epochs = args.e
     learning_rate = args.lr
@@ -126,10 +124,7 @@ if __name__=="__main__":
             nb_context_comments=nb_context_comments,
             mode="eval"
         ) """
-        
-       
-    breakpoint();
-    
+            
     # Loading the model
     if args.model=="avc":
         breakpoint();
