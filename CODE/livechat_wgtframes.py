@@ -201,10 +201,11 @@ class StreamChatDataset(Dataset):
         
         random_comments = candidates_ids[61:70]
         random_comments_am = candidates_am[61:70]
-        
-        return real_comment+plausible_comments, real_comment_am+plausible_comments_am
+
+        #uncomment as needed: plausible: Cosine-Similarity candidate set, Popular candidate set and Random candidate set
+        #return real_comment+plausible_comments, real_comment_am+plausible_comments_am
         #return real_comment+popular_comments, real_comment_am+popular_comments_am
-        #return real_comment+random_comments, real_comment_am+random_comments_am
+        return real_comment+random_comments, real_comment_am+random_comments_am
        
 if __name__=="__main__":
     from transformers import AutoTokenizer
