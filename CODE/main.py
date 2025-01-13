@@ -76,7 +76,6 @@ if __name__=="__main__":
         )
         test_dataset = StreamChatDataset(
             tokenizer, 
-            #"/media/zhe/STREAMCHAT/dataset/",
             ".../dataset/", 
             "features_clip/", 
             test_file, 
@@ -87,7 +86,6 @@ if __name__=="__main__":
         )
         eval_dataset = StreamChatDataset(
             tokenizer, 
-            #"/media/zhe/STREAMCHAT/dataset/", 
             ".../dataset/",
             "features_clip/", 
             eval_file, 
