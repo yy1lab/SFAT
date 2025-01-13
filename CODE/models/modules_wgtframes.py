@@ -216,7 +216,6 @@ class VideoEncoder(nn.Module):
         
         #trans_output = self.linear_transformer(trans_output)
         
-        breakpoint()
         
         clip_input = clip_context.reshape(clip_context.size(0) * clip_context.size(1), -1).contiguous()
         clip_input_am = clip_context_am.reshape(clip_context_am.size(0) * clip_context_am.size(1), -1).contiguous()
@@ -229,7 +228,6 @@ class VideoEncoder(nn.Module):
         scores = self.sm(scores/self.temperature)
         wt_video_features = torch.bmm(scores.permute(0,2,1), n_video_features)
         
-        breakpoint()
         sum_video_feat = torch.sum(wt_video_features, dim = 1)#attention over similarity=wgted sum
 
         
@@ -308,9 +306,8 @@ class CommentDecoder(nn.Module):
         else:
             outputs = self.transformer(embedding, hidden_comments, hidden_video)
         
-        breakpoint()
+        
         #outputs = outputs.squeeze(1)
-        breakpoint()
         predictions = self.fc(outputs)
         return predictions
 
