@@ -127,7 +127,6 @@ if __name__=="__main__":
             
     # Loading the model
     if args.model=="avc":
-        breakpoint();
         
         model = AVCGenerative(
             input_size=input_size,
