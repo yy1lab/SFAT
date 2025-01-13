@@ -7,7 +7,7 @@ Processed Dataset can be downloaded from the [Google-Drive](https://drive.google
 ## SFAT Model
 SFAT model checkpoints (pretraining and training) can be downloaded from the [Google-Drive](https://drive.google.com/drive/folders/1MSe3_0LYnE_-XVBmke87uiQVhEtJvx_J?usp=sharing) and placed in `../model_saves/avc_transformer` folder.
 
-- **Pretraining**: In the first stage, the text encoder for context comments is pre-trained using a masked language modeling (MLM) task. Pretraining script:
+- **Pretraining**: In the first stage, the text encoder for context comments is pre-trained using a masked language modeling (MLM) task. Pretraining script using `main.py` in `CODE` folder:
   ```python
      python3 main.py -model avc -d livechat -b 32 -e 100 -lr 1e-4 -m pretrain
   ```
@@ -16,7 +16,7 @@ SFAT model checkpoints (pretraining and training) can be downloaded from the [Go
   The pre-trained model checkpoint can be downloaded from the above Google Drive: `pretrain_final.pth`.
 - **Training**: In the second stage, the entire model, including the video and context comment encoders, as well as the decoder, is trained. The objective in this phase is to generate the target comment from the multimodal inputs.
 
-  Training the model script: 
+  Training the model script using `main.py` in `CODE` folder: 
   ```python
      python3 main.py -model avc -d livechat -e 200 -lr 1e-4 -b 32 -m train -l pretrain_final.pth
   ```
