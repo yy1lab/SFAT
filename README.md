@@ -11,14 +11,14 @@ SFAT model checkpoints can be downloaded from the [Google-Drive](https://drive.g
   ```python
      python3 main.py -model avc -d livechat -b 32 -e 100 -lr 1e-4 -m pretrain
   ```
-   The pretrained model checkpoint is available in the above folder: pretrain_final.pth.
+   The pre-trained model checkpoint can be downloaded from the above Google Drive: `python pretrain_final.pth`.
 
 - Training: Training: In the second stage, the entire model, including the video and context comment encoders, as well as the decoder, is trained. The objective in this phase is to predict the target comment from the multimodal inputs. Train the model using the following script: 
   ```python
      python3 main.py -model avc -d livechat -e 200 -lr 1e-4 -b 32 -m train -l pretrain_final.pth
   ```
   
-  The trained model checkpoint is available in the above folder: checkpoint_0.0001_199e.pth.
+  The trained model checkpoint can be downloaded from the above Google Drive: `checkpoint_0.0001_199e.pth`.
   
 - Evaluation: Restore the checkpoint and evaluate the model using the following script:
   ```python
