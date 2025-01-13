@@ -222,12 +222,12 @@ class VideoEncoder(nn.Module):
         clip_input_am = clip_context_am.reshape(clip_context_am.size(0) * clip_context_am.size(1), -1).contiguous()
         clip_context_features = self.clip.get_text_features(clip_input, attention_mask=clip_input_am).view(clip_context.size(0), clip_context.size(1), -1)
         
-        n_video_features = torch.nn.functional.normalize(self.linear_transformer(trans_output), p=2, dim=-1)#32x30x256
-        n_text_features = torch.nn.functional.normalize(self.linear_transformer(clip_context_features), p=2, dim=-1)#32x5x256
+        n_video_features = torch.nn.functional.normalize(self.linear_transformer(trans_output), p=2, dim=-1)
+        n_text_features = torch.nn.functional.normalize(self.linear_transformer(clip_context_features), p=2, dim=-1)
         
-        scores = torch.bmm(n_video_features, n_text_features.permute(0,2,1))#32x30x256 * 32x256x5 =32x30x5
+        scores = torch.bmm(n_video_features, n_text_features.permute(0,2,1))
         scores = self.sm(scores/self.temperature)
-        wt_video_features = torch.bmm(scores.permute(0,2,1), n_video_features)#32x5x30 * 32x30x256 =32x5x256
+        wt_video_features = torch.bmm(scores.permute(0,2,1), n_video_features)
         
         breakpoint()
         sum_video_feat = torch.sum(wt_video_features, dim = 1)#attention over similarity=wgted sum
