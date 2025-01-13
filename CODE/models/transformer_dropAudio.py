@@ -212,7 +212,6 @@ class VCDecoderLayer(Module):
     ) -> Tensor:
         x = tgt
         
-        breakpoint()
         if self.norm_first:
             x = x + self._sa_block(self.norm_sa(x), tgt_mask, tgt_key_padding_mask, tgt_is_causal)
             x = x + self._mha_block_comments(self.norm_mha_comments(x), memory_comments, None, None)
