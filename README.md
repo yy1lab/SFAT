@@ -24,4 +24,4 @@ SFAT model checkpoints (pretraining and training) can be downloaded from the [Go
   ```python
      python3 main.py -model avc -d livechat -lr 1e-4 -b 32 -m eval -l checkpoint_0.0001_199e.pth
   ```
-  
+  ## Citation
