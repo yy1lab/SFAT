@@ -29,3 +29,17 @@ SFAT model checkpoints (pretraining and training) can be downloaded from the [Go
      python3 main.py -model avc -d livechat -lr 1e-4 -b 32 -m eval -l checkpoint_0.0001_199e.pth
   ```
   ## Citation
+  If you find this work useful, please cite:
+
+```bibtex
+@ARTICLE{11146668,
+  author={Fatima, Anam and Yu, Yi and Kapuriya, Janak and Lalanne, Julien and Shukla, Jainendra},
+  journal={IEEE Transactions on Multimedia}, 
+  title={Semantic Frame Aggregation-Based Transformer for Live Video Comment Generation}, 
+  year={2025},
+  volume={27},
+  number={},
+  pages={7821-7833},
+  keywords={Videos;Visualization;Semantics;Oral communication;Transformers;Context modeling;Training;Measurement;Decoding;Data mining;Multimodal processing;text generation;live-video commenting},
+  doi={10.1109/TMM.2025.3604921}
+  }
